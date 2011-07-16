@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="IHI.Database.Main" namespace="IHI.Database">
+    <class name="IHI.Database.Subscription,IHI.Database.Main" table="subscriptions">
+        <id name="habbo_id" column="habbo_id" type="int" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+
+      <property name="total_bough"     column="hc_total_bough"     type="int"   not-null="true"  />
+      <property name="skipped_length"  column="hc_skipped_length"  type="int"   not-null="true"  />
+      <property name="paused_start"    column="hc_paused_start"    type="int"   not-null="true"  />
+    </class>
+</hibernate-mapping>
